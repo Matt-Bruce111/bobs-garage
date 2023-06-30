@@ -8,7 +8,11 @@ body .card-body{
 }
 
 * {
-  transition: all 0.35s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+p, label {
+  transition: all 0.01s ease-in-out;
 }
 
 .nav-link {
@@ -20,7 +24,22 @@ body .card-body{
   padding-top: .5rem;
   text-decoration: none;
   color: var(--text);
+  border-bottom: 8px solid var(--nav-bg);
 }
+
+.nav-thing:hover {
+  transform: scale(105%);
+  transition: 0.3s ease;
+  backface-visibility: hidden;
+}
+
+.active {
+  display:block;
+  height:100%;
+  border-bottom: 8px solid var(--accent-bg);
+  color: var(--text);
+  transition: none;
+} 
 
 .add-content-button {
   background-color: var(--accent-bg);
@@ -253,13 +272,6 @@ h4 {
   color: aliceblue;
   font-weight: normal;
 }
-
-.active {
-  display:block;
-  height:100%;
-  border-bottom: 8px solid var(--accent-bg);
-  color: var(--text);
-} 
 
 /* textarea {
   background-color: #252528;

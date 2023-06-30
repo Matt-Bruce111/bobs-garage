@@ -21,7 +21,7 @@ const Header = ({ logout }) => {
   
   // If user is authenticated, show logout link, else show sign in link
   if(isAuthenticated){
-    signInOut = <NavLink onClick={logout} className="nav-thing" to="/home">Logout</NavLink>
+    signInOut = <NavLink onClick={logout} className="nav-thing" to="/">Logout</NavLink>
   } else {
     signInOut = <NavLink className="nav-thing" to="/login">Sign In</NavLink>
   }
@@ -63,12 +63,12 @@ const Header = ({ logout }) => {
           <Navbar.Toggle className='me-4' aria-controls="responsive-navbar-nav" style={{width: '75px', height: '75px'}} />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="d-flex justify-content-between text-center mx-4 w-100 fs-4">
-              <NavLink className="nav-thing" activeClassName="active"  to="/home">Home</NavLink>
-              <NavLink className="nav-thing" activeClassName="active"  to="/services">Services</NavLink>
-              <NavLink className="nav-thing" activeClassName="active"  to="/about">About</NavLink>
-              <NavLink className="nav-thing" activeClassName="active" to="/staff">Staff</NavLink>
-              <NavLink className="nav-thing" activeClassName="active" to="/feedback">Feedback</NavLink>
-              <NavLink className="nav-thing" activeClassName="active" to="/blog">Blog</NavLink>
+              <NavLink className="nav-thing hover-border" activeClassName="active"  to="/home">Home</NavLink>
+              <NavLink className="nav-thing hover-border" activeClassName="active"  to="/services">Services</NavLink>
+              <NavLink className="nav-thing hover-border" activeClassName="active"  to="/about">About</NavLink>
+              <NavLink className="nav-thing hover-border" activeClassName="active" to="/staff">Staff</NavLink>
+              <NavLink className="nav-thing hover-border" activeClassName="active" to="/feedback">Feedback</NavLink>
+              <NavLink className="nav-thing hover-border" activeClassName="active" to="/blog">Blog</NavLink>
               {signInOut}
             </Nav>
           </Navbar.Collapse>
