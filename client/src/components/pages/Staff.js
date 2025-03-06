@@ -17,12 +17,12 @@ const Staff = () => {
       <Banner img={'https://images.pexels.com/photos/185545/pexels-photo-185545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} text="Meet the team!"/>
 
       <div className='row d-flex justify-content-around'>
-        <div className='col'>
+        <div className='row'>
           <StaffCard image={Bob} name='Bob' body='Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales.'/>
           <StaffCard image={Mechanic1} name='Jack' body='Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales.'/>
         </div>
 
-        <div className='col'>
+        <div className='row'>
           <StaffCard image={Mechanic2} name='Ivan' body='Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales.'/>
           <StaffCard image={Receptionist} name='Sheryll' body='Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales.'/> 
         </div>

@@ -1,5 +1,6 @@
 // Import express and any required modules
 const express = require('express');
+const cors = require('cors');
 // Import our db from our models folder.
 const db = require('./models');
 // Bring in our config file.
@@ -19,7 +20,7 @@ const app = express();
 app.use(express.json({ limit: '10mb'}));
 // This middleware allows the server to parse incoming requestions with url-encoded data.
 app.use(express.urlencoded({ extended: true }));
-// Increase the limit of data that can be sent to the server.
+app.use(cors());
 
 // Use our routes
 app.use('/api/auth', auth);
