@@ -5,7 +5,8 @@ import {
   ADD_FEEDBACK,
   UPDATE_FEEDBACK,
   DELETE_FEEDBACK,
-  DEL_ERROR
+  DEL_ERROR,
+  ENVIRONMENT
 } from './types';
 
 // Import axios.
@@ -18,7 +19,7 @@ import { setAlert } from './alertActions'
 export const getFeedback = () => async dispatch => {
   try {
     // Call the endpoint
-    const res = await axios.get('/api/feedback')
+    const res = await axios.get(`${ENVIRONMENT}/api/feedback`)
   
     // Dispatch the response to the reducer.
     dispatch({
@@ -38,7 +39,7 @@ export const getFeedback = () => async dispatch => {
 export const getSingleFeedback = (id) => async dispatch => {
   try {
     // Call the endpoint
-    const res = await axios.get(`/api/feedback/${id}`)
+    const res = await axios.get(`${ENVIRONMENT}/api/feedback/${id}`)
   
     // Dispatch the response to the reducer.
     dispatch({
@@ -58,7 +59,7 @@ export const getSingleFeedback = (id) => async dispatch => {
 export const addFeedback = (feedback) => async dispatch => {
   try {
     // Call the endpoint
-    const res = await axios.post('/api/feedback', feedback)
+    const res = await axios.post(`${ENVIRONMENT}/api/feedback`, feedback)
   
     // Dispatch the response to the reducer.
     dispatch({
@@ -80,7 +81,7 @@ export const updateFeedback = (feedback) => async dispatch => {
     console.log('Update feedback action')
     console.log(feedback)
     // Call the endpoint
-    const res = await axios.put(`/api/feedback/${feedback.feedbackId}`, feedback)
+    const res = await axios.put(`${ENVIRONMENT}/api/feedback/${feedback.feedbackId}`, feedback)
   
     // Dispatch the response to the reducer.
     dispatch({
@@ -100,7 +101,7 @@ export const updateFeedback = (feedback) => async dispatch => {
 export const deleteFeedback = (id) => async dispatch => {
   try {
     // Call the endpoint
-    const res = await axios.delete(`/api/feedback/${id}`)
+    const res = await axios.delete(`${ENVIRONMENT}/api/feedback/${id}`)
   
     // Dispatch the response to the reducer.
     dispatch({
